@@ -1,0 +1,66 @@
+IContact Application using Express & MongoDB - Developed By : undhad bansi
+---------------------------------------------------------------------------
+
+DATABASE :IContacts
+Tables : contacts , groups
+Editor:VSCODE
+
+
+-> API ->Testing
+------------------------------------------------------------------------------
+-> Test the server (using ThunderClient / postman / insomnia)
+------------------------------------------------------------------------------
+GET -> to get data from server ->READ
+POST -> to create data at server ->CREATE
+PUT -> to update data at server ->UPDATE
+DELETE -> to delete data at server ->DELETE
+
+/**1
+  @usage : to  all contacts
+  @method: GET
+  @params: no-params
+  @url : http://localhost:999/contacts
+*/
+
+/**2
+  @usage :  get a contacts
+  @method: GET
+  @params: conatctId
+  @url : http://localhost:999/contactId
+*/
+
+/**3
+  @usage : create a contacts
+  @method: GET
+  @params: no-params
+  @url : http://localhost:999/contacts
+*/
+git add React/ js/Reactjs/(Revision\)/Task.zip
+
+/**4 
+  @usage : update a contact
+  @method: PUT
+  @params: name , imageUrl , email , mobile , company , title , groupId
+  @url : http://localhost:999/contacts/:conactId
+*/
+
+/**5 
+  @usage : Delete a contact
+  @method: DELETE
+  @params: conatctId
+  @url : http://localhost:999/contacts/:contactId
+*/
+
+/**6
+  @usage : Get all groups
+  @method: GET
+  @params: no-params
+  @url : http://localhost:999/groups
+*/
+
+/**7 
+  @usage : Get a group
+  @method: GET
+  @params: groupId
+  @url : http://localhost:999/contacts/:groupId
+*/
