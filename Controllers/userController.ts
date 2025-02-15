@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import { Request, Response } from 'express'
 import { IUser } from '../Model/IUser';
 import UserTable from '../database/userSchema';
-import { error } from 'console';
+
 
 // create method =>post =>insert data
 
@@ -36,7 +36,7 @@ export const readUser = async (request: Request, response: Response) => {
             return response.json({
                 data: userData
             })
-        }
+        }   
     } catch (err) {
         return response.status(400).json({
             msg: "something went wrong"
@@ -52,6 +52,7 @@ export const readUser = async (request: Request, response: Response) => {
  * @url:http://localhost:9988/user/:userId
  */
 // get single data 
+
 export const getUser = async (request: Request, response: Response) => {
     let { userId } = request.params;
     const mongoGroupId = new mongoose.Types.ObjectId(userId);
@@ -103,7 +104,7 @@ export const putUser = async (request: Request, response: Response) => {
 export const deleteUser = async (request: Request, response: Response) => {
     const { userId } = request.params;
     try {
-        console.log("delate data");
+        console.log("delete data");
 
         const deleteUser = await UserTable.findByIdAndDelete(userId);
 

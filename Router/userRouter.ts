@@ -1,8 +1,5 @@
 import {Request , Response , Router} from 'express';
 import * as userController from '../Controllers/userController'
-import { request } from 'http';
-
-
 
 const userRouter:Router=Router();
 
@@ -49,11 +46,18 @@ userRouter.get("/", async(request:Request , response:Response)=>{
     await userController.readUser(request , response)
 })
 
-export default userRouter
 
 
 //put method
 
+
+/*
+   @usage: put User by ID
+   @method: put
+   @params: userId
+   @url: http://localhost:9988/user/:userId
+   */
+  
 
 userRouter.put("/:userId", async(request:Request , response:Response)=>{
     await userController.putUser(request, response)
@@ -65,8 +69,11 @@ userRouter.put("/:userId", async(request:Request , response:Response)=>{
    @method: DELETE
    @params: userId
    @url: http://localhost:9988/user/:userId
-*/
+   */
+  
+  userRouter.delete("/:userId" , async (request:Request , response:Response)=>{
+      await userController.deleteUser(request , response);
+    })
 
-userRouter.delete("/:userId" , async (request:Request , response:Response)=>{
-    await userController.deleteUser(request , response);
-})
+
+    export default userRouter
