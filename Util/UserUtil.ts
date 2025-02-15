@@ -1,5 +1,5 @@
 import path from 'path';
-import {IUser} from '../Models/IUser';
+import { IGroup } from '../Model/IGroup';
 
 
 const jsonfile = require('jsonfile')
@@ -9,7 +9,7 @@ export class UserUtil{
 
     // private static userjsonpath = path.join(__dirname, "", 'db', 'user.json')
     private static userjsonpath = path.join(__dirname, "..","db", "user.json");
-    public static getAllUserFromDB():Promise<IUser[]>{
+    public static getAllUserFromDB():Promise<IGroup[]>{
         return new Promise( (resolve , reject)=>{
         jsonfile.readFile(this.userjsonpath , ( err: any , data:any)=>{
          if(err){

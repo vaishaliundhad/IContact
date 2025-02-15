@@ -64,3 +64,54 @@ git add React/ js/Reactjs/(Revision\)/Task.zip
   @params: groupId
   @url : http://localhost:999/contacts/:groupId
 */
+
+
+[
+  {
+    "name": "vaishali",
+    "imageurl": "https://www.canva.com/design/DAGeJ2s7VBc/PhiBpAP6Xm139aOfQhJbjA/edit",
+    "email": "bansiundhad34@gmail.com",
+    "mobile": "8799306948",
+    "company": "skillquode",
+    "title": "xyz",
+    "groupId": {
+      "id": 101,
+      "name": "IT"
+    }
+  }
+]
+
+
+//interface
+  
+export interface ArtistElement {
+    name:     string;
+    imageurl: string;
+    email:    string;
+    mobile:   string;
+    company:  string;
+    title:    string;
+    groupId:  GroupID;
+}
+
+export interface GroupID {
+    id:   number;
+    name: string;
+}
+
+export interface ArtistClass {
+    name:    string;
+    founded: number;
+    members: string[];
+}
+
+export interface Album {
+    name:   string;
+    artist: ArtistClass;
+    tracks: Track[];
+}
+
+export interface Track {
+    name:     string;
+    duration: number;
+}
